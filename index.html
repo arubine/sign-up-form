@@ -8,6 +8,7 @@
     />
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="/index.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -21,7 +22,16 @@
           <h1 class="odin">ODIN</h1>
         </div>
         <div class="credits">
-          Photo by Halie West on Unsplash
+          Photo by
+          <a
+            href="https://unsplash.com/@haliewestphoto"
+            target="_blank"
+            >Halie West</a
+          >
+          on
+          <a href="https://unsplash.com/" target="_blank"
+            >Unsplash</a
+          >
         </div>
       </div>
       <div class="right-side">
@@ -73,7 +83,7 @@
               />
             </div>
             <div>
-              <label for="password"></label>
+              <label for="password">password</label>
               <input
                 type="password"
                 id="password"
@@ -82,7 +92,9 @@
               />
             </div>
             <div>
-              <label for="password-confirm"></label>
+              <label for="password-confirm"
+                >confirm password</label
+              >
               <input
                 type="password"
                 id="password-confirm"
@@ -93,7 +105,9 @@
           </div>
           <button type="submit">Create Account</button>
         </form>
-        <p>Already have an account? Log in</p>
+        <p class="login">
+          Already have an account? <span>Log in</span>
+        </p>
       </div>
     </div>
   </body>
