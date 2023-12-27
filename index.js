@@ -3,13 +3,16 @@ const confPasswordInput = document.querySelector(
   '#password-confirm'
 )
 
+const pwdDiv = document.querySelector('.pwd')
+const confPwdDiv = document.querySelector('.conf-pwd')
+
 function checkPasswords() {
   if (passwordInput.value !== confPasswordInput.value) {
-    passwordInput.classList.add('error')
-    confPasswordInput.classList.add('error')
+    pwdDiv.classList.add('error')
+    confPwdDiv.classList.add('error')
   } else {
-    passwordInput.classList.remove('error')
-    confPasswordInput.classList.remove('error')
+    pwdDiv.classList.remove('error')
+    confPwdDiv.classList.remove('error')
   }
 }
 

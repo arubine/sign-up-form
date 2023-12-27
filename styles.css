@@ -91,7 +91,7 @@ body {
 }
 
 .logo-panel {
-  margin-top: 200px;
+  margin-top: 25vh;
   display: flex;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -183,6 +183,7 @@ input:focus {
 }
 
 label {
+  width: 280px;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: bold;
@@ -205,11 +206,11 @@ button {
 
 button:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 15px -5px black;
+  box-shadow: 0px 5px 15px -5px black;
 }
 
 button:hover:active {
-  box-shadow: 0px 0px 20px -5px black;
+  box-shadow: 0px 5px 20px -5px black;
   /* color: gray; */
 }
 
@@ -224,14 +225,23 @@ button:hover:active {
   font-weight: bold;
 }
 
-.error {
+.error > input {
   border: 1px solid red;
 }
 
-.error::after {
-  content: '';
+label {
+  position: relative;
+}
+
+.error > label[for='password']::after {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  color: red;
+  text-transform: none;
+  top: 60px;
+  position: absolute;
+  content: '* Passwords do not match';
   height: 20px;
-  width: 50px;
   display: block;
-  border: 1px solid red;
 }
